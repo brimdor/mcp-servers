@@ -1,0 +1,24 @@
+{
+  "$schema": "https://raw.githubusercontent.com/open-webui/mcpo/main/schemas/config.schema.json",
+  "version": "1.0",
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8081,
+    "auth": {
+      "type": "token",
+      "env": "MCPO_API_KEY"
+    },
+    "cors": {
+      "enabled": true,
+      "origins": ["*"]
+    }
+  },
+  "logLevel": "info",
+  "upstreams": [
+    // Example entries (remove if unused):
+    // { "name": "weaviate", "url": "ws://weaviate-mcp.svc.cluster.local:8080" },
+    // { "name": "filesystem", "command": "mcp-filesystem", "args": ["--root", "/data"], "transport": "stdio" }
+  ],
+  "tools": [],
+  "commands": []
+}
