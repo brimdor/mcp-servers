@@ -14,11 +14,13 @@
     }
   },
   "logLevel": "info",
-  "upstreams": [
-    // Example entries (remove if unused):
-    // { "name": "weaviate", "url": "ws://weaviate-mcp.svc.cluster.local:8080" },
-    // { "name": "filesystem", "command": "mcp-filesystem", "args": ["--root", "/data"], "transport": "stdio" }
-  ],
+  "mcpServers": {
+    "time": {
+      "command": "uvx",
+      "args": ["mcp-server-time", "--local-timezone=America/Chicago"]
+    }
+  },
+  "upstreams": [],
   "tools": [],
   "commands": []
 }
