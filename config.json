@@ -25,7 +25,7 @@
       "args": [
         "bash",
         "-lc",
-        "python -m agent_mcp"
+        "python -m agent_mcp.cli -- server --port 8080 --project-dir ."
       ]
     }
   },
