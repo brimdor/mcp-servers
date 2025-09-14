@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+# Lightweight wrapper to ensure 'kill' is available for exechook
+# Usage: kill -HUP 1
+if [ "$#" -eq 0 ]; then
+  echo "Usage: kill [signal] pid" >&2
+  exit 2
+fi
+# Execute via shell builtin or system kill
+if command -v kill >/dev/null 2>&1; then
+  # If system kill exists, call it
+  command kill "$@"
+else
+  # Fallback to builtin via sh -c
+  /bin/sh -c "kill $*"
+fi
