@@ -18,28 +18,9 @@
     "time": {
       "command": "uvx",
       "args": ["mcp-server-time", "--local-timezone=America/Chicago"]
-    },
-
-    "agent-mcp": {
-      "command": "/usr/bin/env",
-      "args": [
-        "bash",
-        "-lc",
-        "python -m agent_mcp.cli -- server --port 8080 --project-dir ."
-      ]
     }
   },
-  "upstreams": [
-    {
-      "name": "agent-mcp",
-      "type": "git",
-      "url": "https://github.com/rinadelph/Agent-MCP.git",
-      "ref": "main",
-      "install": [
-        "python -m pip install -e ."
-      ]
-    }
-  ],
+  "upstreams": [],
   "tools": [],
   "commands": []
 }
