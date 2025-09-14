@@ -18,10 +18,6 @@
     "time": {
       "command": "uvx",
       "args": ["mcp-server-time", "--local-timezone=America/Chicago"]
-    },
-    "status": {
-      "command": "uvx",
-      "args": ["mcp-server-status"]
     }
   },
   "upstreams": [],
