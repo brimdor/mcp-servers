@@ -22,7 +22,7 @@
     ,
     "playwright": {
       "command": "npx",
-      "args": ["@playwright/mcp@latest"]
+      "args": ["@playwright/mcp@latest", "--host", "0.0.0.0", "--port", "8931", "--browser", "chromium", "--no-sandbox"]
     }
   },
   "upstreams": [
@@ -33,7 +33,7 @@
       "ref": "main",
       "install": [
         "npx playwright install-deps || true",
-        "npx playwright install chrome"
+        "npx playwright install chromium"
       ]
     }
   ],
