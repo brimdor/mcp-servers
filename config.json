@@ -31,7 +31,10 @@
       "type": "git",
       "url": "https://github.com/microsoft/playwright-mcp.git",
       "ref": "main",
-      "install": []
+      "install": [
+        "npx playwright install-deps || true",
+        "npx playwright install chrome"
+      ]
     }
   ],
   "tools": [],
